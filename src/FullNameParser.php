@@ -332,7 +332,7 @@ class FullNameParser
 
     $found_suffix_arr = array();
     foreach ($this->dict['suffixes']['prof'] as $suffix) {
-      if (preg_match('/[,\s]+' . preg_quote($suffix) . '\b/iu', $name, $matches)) {
+      if (preg_match('/[,\s]+' . preg_quote($suffix) . '\b/u', $name, $matches)) {
         $found_suffix = trim($matches[0]);
         $found_suffix = rtrim($found_suffix, ',');
         $found_suffix = ltrim($found_suffix, ',');
